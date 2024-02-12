@@ -11,8 +11,11 @@ jobs:
   trigger-build-github:
     runs-on: ubuntu-latest
     name: 'Trigger workflow to build services'
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
     steps:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v3
         with:
           event-type: build_services
+
