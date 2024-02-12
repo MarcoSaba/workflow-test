@@ -1,0 +1,17 @@
+name: wf-B
+
+on:
+  repository_dispatch:
+    types: [build_services]
+permissions:
+  actions: read
+  contents: write
+  issues: write
+jobs:
+  echo-start:
+    runs-on: ubuntu-latest
+    name: "echo start"
+    steps:
+      - name: echo start
+        run: |
+          echo "I started"
