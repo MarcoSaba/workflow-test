@@ -18,5 +18,4 @@ jobs:
         uses: peter-evans/repository-dispatch@v3
         with:
           event-type: build_services
-          token: ${{ github.token }}
 
